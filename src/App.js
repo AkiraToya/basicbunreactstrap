@@ -1,18 +1,7 @@
-import { useState } from "react";
 import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const decrease = () => {
-    console.log("Decrease")
-    setCount(count - 1)
-  }
-
-  const increase = () => {
-    console.log("Increase")
-    setCount(count + 1)
-  }
+  let count = 0
 
   return (
     <Container>
@@ -30,13 +19,17 @@ function App() {
             <Col>
               <Button
                 className="full-width"
-                onClick={decrease}
+                onClick={() => {
+                  console.log("Decrease")
+                }}
               >-</Button>
             </Col>
             <Col>
               <Button
                 className="full-width"
-                onClick={increase}
+                onClick={() => {
+                  console.log("Increase")
+                }}
               >+</Button>
             </Col>
           </Row>
