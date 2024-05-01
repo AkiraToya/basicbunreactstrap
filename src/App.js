@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
 
 function App() {
   const [count, setCount] = useState(0)
 
+  useEffect(() => {
+    console.log("Count:", count)
+  }, [count])
+
   const decrease = () => {
     setCount(count - 1)
-    console.log("Decrease, count:", count)
   }
 
   const increase = () => {
     setCount(count + 1)
-    console.log("Increase, count:", count)
   }
 
   return (
