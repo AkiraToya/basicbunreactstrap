@@ -1,6 +1,6 @@
 import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
 import { useCounter } from "./modules/useCounter";
-import { CountLabel } from "./components/CountLabel";
+import { CountLabel } from "./components/CountLabel.tsx";
 import { CountControl } from "./components/CountControl";
 
 function App() {
