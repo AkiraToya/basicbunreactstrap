@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
 
-function App() {
+const useCounter = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
@@ -15,6 +15,12 @@ function App() {
   const increase = () => {
     setCount(count + 1)
   }
+
+  return {decrease, increase, count }
+}
+
+function App() {
+  const { decrease, increase, count } = useCounter()
 
   return (
     <Container>
