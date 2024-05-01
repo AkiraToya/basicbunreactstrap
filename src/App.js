@@ -1,5 +1,7 @@
 import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
 import { useCounter } from "./modules/useCounter";
+import { CountLabel } from "./components/CountLabel";
+import { CountControl } from "./components/CountControl";
 
 function App() {
   const { decrease, increase, count } = useCounter()
@@ -8,28 +10,12 @@ function App() {
     <Container>
       <Card className="margin-top-20">
         <CardBody className="center">
-          <Row>
-            <Col style={{
-              fontSize: "1.5em"
-            }}>
-              Count: {count}
-            </Col>
-          </Row>
+          <CountLabel count={count} />
           <br />
-          <Row>
-            <Col>
-              <Button
-                className="full-width"
-                onClick={decrease}
-              >-</Button>
-            </Col>
-            <Col>
-              <Button
-                className="full-width"
-                onClick={increase}
-              >+</Button>
-            </Col>
-          </Row>
+          <CountControl
+            decreaseFn={decrease}
+            increaseFn={increase} 
+          />
         </CardBody>
       </Card>
     </Container>
