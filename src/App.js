@@ -17,10 +17,20 @@ function App() {
           <br />
           <Row>
             <Col>
-              <Button className="full-width">-</Button>
+              <Button
+                className="full-width"
+                onClick={() => {
+                  console.log("Decrease")
+                }}
+              >-</Button>
             </Col>
             <Col>
-              <Button className="full-width">+</Button>
+              <Button
+                className="full-width"
+                onClick={() => {
+                  console.log("Increase")
+                }}
+              >+</Button>
             </Col>
           </Row>
         </CardBody>
