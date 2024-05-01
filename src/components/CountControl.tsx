@@ -1,8 +1,14 @@
+import React from "react";
 import { Button, Col, Row } from "reactstrap";
 
-export const CountControl = ({
-    decreaseFn, increaseFn
-}) => {
+interface ICountControlProps{
+    decreaseFn: () => void
+    increaseFn: () => void
+}
+
+export const CountControl = (props: ICountControlProps) => {
+    const { decreaseFn, increaseFn } = props
+
     return (
         <Row>
             <Col>

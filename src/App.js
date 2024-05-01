@@ -1,7 +1,7 @@
 import { Card, CardBody, Container } from "reactstrap";
 import { useCounter } from "./modules/useCounter";
 import { CountLabel } from "./components/CountLabel.tsx";
-import { CountControl } from "./components/CountControl";
+import { CountControl } from "./components/CountControl.tsx";
 
 function App() {
   const { decrease, increase, count } = useCounter()
