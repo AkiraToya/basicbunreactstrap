@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Col, Container, Row } from "reactstrap";
+import { Card, CardBody, Container } from "reactstrap";
 import { useCounter } from "./modules/useCounter";
 import { CountLabel } from "./components/CountLabel.tsx";
 import { CountControl } from "./components/CountControl";
